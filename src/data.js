@@ -49,6 +49,20 @@ const data = [
     ],
     bottomText: "I want to see both",
   },
+  {
+    title: "Do you need vision correction?",
+    answers: [
+      {
+        id: nanoid(),
+        text: "Yes",
+      },
+      {
+        id: nanoid(),
+        text: "No",
+      },
+    ],
+    bottomText: "Skip",
+  },
 ];
 
 export default data;

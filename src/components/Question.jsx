@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import data from "../data";
 import Screen1 from "./screens/Screen1";
 import Screen2 from "./screens/Screen2";
+import Screen3 from "./screens/Screen3";
 
 function Question({ setCount, count }) {
   const [formData, setFormData] = useState({
@@ -17,7 +18,6 @@ function Question({ setCount, count }) {
     screen10: "",
   });
   const indexCount = count - 1; // array index
-  const info = data[indexCount];
   console.log(formData);
   const checkChecked = (name, str) => formData[name] === str;
   const handleChange = (e) => {
@@ -53,7 +53,14 @@ function Question({ setCount, count }) {
       ),
     },
     {
-      question: count && <Screen1 />,
+      question: count && (
+        <Screen3
+          count={count}
+          setCount={setCount}
+          handleChange={handleChange}
+          checkChecked={checkChecked}
+        />
+      ),
     },
   ];
   return <>{count && componentsData[indexCount].question}</>;

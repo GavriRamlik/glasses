@@ -2,7 +2,6 @@ import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
 import Title from "../AnswerComponents/Title";
 import BottomText from "../AnswerComponents/BottomText";
 import data from "../../data";
-
 export default function Screen1({
   count,
   setCount,

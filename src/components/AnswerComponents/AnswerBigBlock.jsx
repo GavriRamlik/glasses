@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function AnswerBigBlock({
   margin = "14", //distance between blocks
   height = "138",
@@ -19,7 +21,11 @@ export default function AnswerBigBlock({
     },
   };
   return (
-    <label>
+    <motion.label
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <input
         type='radio'
         className='input peer'
@@ -39,6 +45,6 @@ export default function AnswerBigBlock({
           {text}
         </p>
       </div>
-    </label>
+    </motion.label>
   );
 }
