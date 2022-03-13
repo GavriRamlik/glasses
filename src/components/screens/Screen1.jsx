@@ -1,0 +1,37 @@
+import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
+import Title from "../AnswerComponents/Title";
+import BottomText from "../AnswerComponents/BottomText";
+import data from "../../data";
+
+export default function Screen1({
+  count,
+  setCount,
+  handleChange,
+  checkChecked,
+}) {
+  const info = data[count - 1];
+  return (
+    <>
+      <Title margin='24' width='238' text={info.title} />
+      {info.answers.map((elem) => (
+        <AnswerBigBlock
+          key={elem.id}
+          text={elem.text}
+          img={elem.img}
+          marginBetween={elem.marginBetween}
+          handleClick={setCount}
+          handleChange={handleChange}
+          inputName={`screen${count}`}
+          checkChecked={checkChecked}
+        />
+      ))}
+      <BottomText
+        text={info.bottomText}
+        handleClick={setCount}
+        handleChange={handleChange}
+        inputName={`screen${count}`}
+        checkChecked={checkChecked}
+      />
+    </>
+  );
+}
