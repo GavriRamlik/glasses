@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 
 export default function AnswerBigBlock({
-  margin = "14", //distance between blocks
-  height = "138",
+  margin = "12", //distance between blocks
+  height = "56",
   text = "",
-  img,
-  marginBetween, // distance between content
+  size = "",
   inputName,
   handleChange,
   checkChecked,
@@ -15,9 +14,6 @@ export default function AnswerBigBlock({
     block: {
       height: `${height}px`,
       marginBottom: `${margin}px`,
-    },
-    text: {
-      marginTop: img ? `${marginBetween}px` : "0",
     },
   };
   return (
@@ -36,12 +32,14 @@ export default function AnswerBigBlock({
         onClick={handleClick}
       />
       <div
-        className='answer-card flex items-center justify-center flex-col w-[274px] cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner'
+        className='answer-card flex items-center justify-between w-[318px] cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner px-[21px]'
         style={style.block}
       >
-        {img && <img src={img} alt={text} />}
-        <p className=' answer-text' style={style.text}>
+        <p className='answer-text font-normal' style={style.text}>
           {text}
+        </p>
+        <p className='text-black font-bold leading-[25px] text-[18px]'>
+          {size}
         </p>
       </div>
     </motion.label>

@@ -10,7 +10,7 @@ export default function PreScreen({ text, visible }) {
           animate={{ opacity: 1 }}
         >
           <img src={like} alt='like' className='mx-auto' />
-          <h2 className='title mt-[25px]'>{text}</h2>
+          <h2 className='title mt-[25px] h-[132px]'>{text}</h2>
         </motion.div>
       )}
     </AnimatePresence>

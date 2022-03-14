@@ -14,7 +14,7 @@ export default function BottomText({
         value={"none"}
         onChange={handleChange}
         checked={checkChecked(inputName, "none")}
-        onClick={() => handleClick((prev) => prev + 1)}
+        onClick={handleClick}
       />
       <p className='text-base leading-[22px] text-grayDark underline font-bold peer-checked:text-gray-400'>
         {text}

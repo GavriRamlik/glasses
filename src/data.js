@@ -55,6 +55,7 @@ const data = [
       {
         id: nanoid(),
         text: "Yes",
+        additionalScreen: true,
       },
       {
         id: nanoid(),
@@ -62,6 +63,27 @@ const data = [
       },
     ],
     bottomText: "Skip",
+  },
+  {
+    title: "What's your current frame size?",
+    answers: [
+      {
+        id: nanoid(),
+        text: "Small",
+        size: "42-48 mm",
+      },
+      {
+        id: nanoid(),
+        text: "Medium",
+        size: "49-53 mm",
+      },
+      {
+        id: nanoid(),
+        text: "Large",
+        size: "54-58 mm",
+      },
+    ],
+    bottomText: "I don’t know",
   },
 ];
 

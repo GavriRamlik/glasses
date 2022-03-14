@@ -3,12 +3,13 @@ import data from "../data";
 import Screen1 from "./screens/Screen1";
 import Screen2 from "./screens/Screen2";
 import Screen3 from "./screens/Screen3";
-
+import Screen4 from "./screens/Screen4";
 function Question({ setCount, count }) {
   const [formData, setFormData] = useState({
     screen1: "",
     screen2: "",
     screen3: "",
+    screen3_2: "",
     screen4: "",
     screen5: "",
     screen6: "",
@@ -55,6 +56,16 @@ function Question({ setCount, count }) {
     {
       question: count && (
         <Screen3
+          count={count}
+          setCount={setCount}
+          handleChange={handleChange}
+          checkChecked={checkChecked}
+        />
+      ),
+    },
+    {
+      question: count && (
+        <Screen4
           count={count}
           setCount={setCount}
           handleChange={handleChange}

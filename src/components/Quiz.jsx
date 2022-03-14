@@ -32,7 +32,7 @@ function Quiz({ setStartToTrue }) {
       </header>
       <form className='mt-[50px] flex flex-col items-center relative h-[505px]'>
         <Question
-          setCount={setCount}
+          setCount={() => setCount((prev) => prev + 1)}
           count={count}
           setStartToTrue={setStartToTrue}
         />
