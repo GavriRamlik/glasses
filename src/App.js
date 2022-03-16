@@ -6,6 +6,7 @@ import Quiz from "./components/Quiz";
 
 function App() {
   const [startScrenn, setStartScreen] = useState(true);
+
   const style = {
     background: startScrenn
       ? "linear-gradient(180deg, #E8F0F2 0%, rgba(232, 240, 242, 0) 100%)"
@@ -18,7 +19,7 @@ function App() {
           <header className='px-[25px] h-[66px] flex items-center justify-between bg-white'>
             <img src={logo} alt='logo' />
             <button onClick={() => setStartScreen(false)}>
-              <img src={arrow_right} alt='arrow_right' />
+              <img src={arrow_right} alt='arrow_right h-[153px]' />
             </button>
           </header>
           <main className='mt-[67px] flex flex-col items-center justify-center'>

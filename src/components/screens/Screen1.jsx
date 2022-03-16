@@ -17,10 +17,11 @@ export default function Screen1({
           key={elem.id}
           text={elem.text}
           img={elem.img}
-          marginBetween={elem.marginBetween}
+          value={elem.value}
+          marginBetween={"16"}
           handleClick={setCount}
           handleChange={handleChange}
-          inputName={`screen${count}`}
+          inputName={info.screenName}
           checkChecked={checkChecked}
         />
       ))}
@@ -28,7 +29,7 @@ export default function Screen1({
         text={info.bottomText}
         handleClick={setCount}
         handleChange={handleChange}
-        inputName={`screen${count}`}
+        inputName={info.screenName}
         checkChecked={checkChecked}
       />
     </>

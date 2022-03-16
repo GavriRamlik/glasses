@@ -9,6 +9,7 @@ export default function AnswerBigBlock({
   handleChange,
   checkChecked,
   handleClick,
+  value,
 }) {
   const style = {
     block: {
@@ -26,9 +27,9 @@ export default function AnswerBigBlock({
         type='radio'
         className='input peer'
         name={inputName}
-        value={text}
+        value={value}
         onChange={handleChange}
-        checked={checkChecked(inputName, text)}
+        checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
       <div

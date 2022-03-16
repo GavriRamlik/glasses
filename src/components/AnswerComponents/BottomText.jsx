@@ -4,6 +4,7 @@ export default function BottomText({
   checkChecked,
   handleClick,
   text,
+  value = "skip",
 }) {
   return (
     <label className='absolute bottom-0 cursor-pointer'>
@@ -11,9 +12,9 @@ export default function BottomText({
         type='radio'
         className='input peer'
         name={inputName}
-        value={"none"}
+        value={value}
         onChange={handleChange}
-        checked={checkChecked(inputName, "none")}
+        checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
       <p className='text-base leading-[22px] text-grayDark underline font-bold peer-checked:text-gray-400'>

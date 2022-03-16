@@ -4,22 +4,10 @@ import Screen1 from "./screens/Screen1";
 import Screen2 from "./screens/Screen2";
 import Screen3 from "./screens/Screen3";
 import Screen4 from "./screens/Screen4";
-function Question({ setCount, count }) {
-  const [formData, setFormData] = useState({
-    screen1: "",
-    screen2: "",
-    screen3: "",
-    screen3_2: "",
-    screen4: "",
-    screen5: "",
-    screen6: "",
-    screen7: "",
-    screen8: "",
-    screen9: "",
-    screen10: "",
-  });
+import Screen5 from "./screens/Screen5";
+import Screen6 from "./screens/Screen6";
+function Question({ setCount, count, formData, setFormData }) {
   const indexCount = count - 1; // array index
-  console.log(formData);
   const checkChecked = (name, str) => formData[name] === str;
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,6 +58,28 @@ function Question({ setCount, count }) {
           setCount={setCount}
           handleChange={handleChange}
           checkChecked={checkChecked}
+        />
+      ),
+    },
+    {
+      question: count && (
+        <Screen5
+          count={count}
+          setCount={setCount}
+          handleChange={handleChange}
+          checkChecked={checkChecked}
+          formData={formData}
+        />
+      ),
+    },
+    {
+      question: count && (
+        <Screen6
+          count={count}
+          setCount={setCount}
+          handleChange={handleChange}
+          checkChecked={checkChecked}
+          formData={formData}
         />
       ),
     },

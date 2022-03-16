@@ -11,6 +11,7 @@ export default function Screen3({
   setCount,
   handleChange,
   checkChecked,
+  formData,
 }) {
   const [visible, setVisible] = useState(true);
   const [additionalScreen, setAdditionalScreen] = useState(false);
@@ -27,40 +28,24 @@ export default function Screen3({
   } else if (additionalScreen) {
     componentToRender = (
       <>
-        <Title
-          margin='23'
-          text='What do you need your glasses for?'
-          width='auto'
-        />
-        <AnswerBigBlock
-          height='84'
-          text={"Near Vision"}
-          handleClick={setCount}
-          handleChange={handleChange}
-          inputName={`screen${count}_2`}
-          checkChecked={checkChecked}
-        />
-        <AnswerBigBlock
-          height='84'
-          text={"Distance Vision"}
-          handleClick={setCount}
-          handleChange={handleChange}
-          inputName={`screen${count}_2`}
-          checkChecked={checkChecked}
-        />
-        <AnswerBigBlock
-          height='84'
-          text={"Multifocal / Progressive"}
-          handleClick={setCount}
-          handleChange={handleChange}
-          inputName={`screen${count}_2`}
-          checkChecked={checkChecked}
-        />
+        <Title margin='23' text={info.anotherScreen.title} width='auto' />
+        {info.anotherScreen.answers.map((elem) => (
+          <AnswerBigBlock
+            height='84'
+            key={elem.id}
+            text={elem.text}
+            value={elem.value}
+            handleClick={setCount}
+            handleChange={handleChange}
+            inputName={info.screenName}
+            checkChecked={checkChecked}
+          />
+        ))}
         <BottomText
-          text={"skip"}
+          text={info.anotherScreen.bottomText}
           handleClick={setCount}
           handleChange={handleChange}
-          inputName={`screen${count}_2`}
+          inputName={info.screenName}
           checkChecked={checkChecked}
         />
       </>
@@ -82,8 +67,9 @@ export default function Screen3({
               text={elem.text}
               handleClick={clickHandler}
               handleChange={handleChange}
-              inputName={`screen${count}`}
+              inputName={info.screenName}
               checkChecked={checkChecked}
+              value={"none"}
             />
           );
         })}
@@ -91,7 +77,7 @@ export default function Screen3({
           text={info.bottomText}
           handleClick={setCount}
           handleChange={handleChange}
-          inputName={`screen${count}`}
+          inputName={info.screenName}
           checkChecked={checkChecked}
         />
       </>

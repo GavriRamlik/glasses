@@ -5,52 +5,67 @@ import womanEye from "./images/second_ques/womenEyeglasses.svg";
 import menEye from "./images/second_ques/menEyeglasses.svg";
 import womanSun from "./images/second_ques/womenSunglasses.svg";
 import menSun from "./images/second_ques/menSunglasses.svg";
+import darkShade from "./images/fifth_ques/darkShade.svg";
+import lightShade from "./images/fifth_ques/lightShade.svg";
+import transShade from "./images/fifth_ques/transShade.svg";
+import menLong from "./images/sixth_ques/menOval.svg";
+import menRound from "./images/sixth_ques/menRound.svg";
+import menBoth from "./images/sixth_ques/menBoth.svg";
+import womanLong from "./images/sixth_ques/womanLong.svg";
+import womanRound from "./images/sixth_ques/womanRound.svg";
+import womanBoth from "./images/sixth_ques/womanBoth.svg";
+import bothLong from "./images/sixth_ques/bothLong.svg";
+import bothRound from "./images/sixth_ques/bothRound.svg";
+import bothBoth from "./images/sixth_ques/bothBoth.svg";
 
 const data = [
   {
     title: "You are looking for",
+    screenName: "gender",
     answers: [
       {
         id: nanoid(),
         text: "Women's Styles",
         img: womanImg,
-        marginBetween: "16",
+        value: "5",
       },
       {
         id: nanoid(),
         text: "Men's Styles",
         img: manImg,
-        marginBetween: "16",
+        value: "4",
       },
     ],
     bottomText: "I'd like to see both",
   },
   {
     title: "What type of glasses are you looking for?",
+    screenName: "eyewear_type",
     answers: [
       {
         id: nanoid(),
         text: "Eyeglasses",
         img: {
-          men: menEye,
-          woman: womanEye,
+          4: menEye,
+          5: womanEye,
         },
-        marginBetween: "12",
+        value: "210",
       },
       {
         id: nanoid(),
         text: "Sunglasses",
         img: {
-          men: menSun,
-          woman: womanSun,
+          4: menSun,
+          5: womanSun,
         },
-        marginBetween: "12",
+        value: "211",
       },
     ],
     bottomText: "I want to see both",
   },
   {
     title: "Do you need vision correction?",
+    screenName: "lenstype",
     answers: [
       {
         id: nanoid(),
@@ -63,27 +78,157 @@ const data = [
       },
     ],
     bottomText: "Skip",
+    anotherScreen: {
+      title: "What do you need your glasses for?",
+      answers: [
+        {
+          id: nanoid(),
+          text: "Near Vision",
+          value: "6",
+        },
+        {
+          id: nanoid(),
+          text: "Distance Vision",
+          value: "6",
+        },
+        {
+          id: nanoid(),
+          text: "Multifocal / Progressive",
+          value: "7",
+        },
+      ],
+      bottomText: "Skip",
+    },
   },
   {
     title: "What's your current frame size?",
+    screenName: "frame_size",
     answers: [
       {
         id: nanoid(),
         text: "Small",
         size: "42-48 mm",
+        value: "68",
       },
       {
         id: nanoid(),
         text: "Medium",
         size: "49-53 mm",
+        value: "67",
       },
       {
         id: nanoid(),
         text: "Large",
         size: "54-58 mm",
+        value: "66",
       },
     ],
     bottomText: "I don’t know",
+    anotherScreen: {
+      title: "How wide would you say your face is?",
+      answers: [
+        {
+          id: nanoid(),
+          text: "Wider Than Average",
+          value: "66",
+        },
+        {
+          id: nanoid(),
+          text: "Average",
+          value: "67",
+        },
+        {
+          id: nanoid(),
+          text: "Narrower Than Average",
+          value: "68",
+        },
+      ],
+      bottomText: "I’m not sure",
+    },
+  },
+  {
+    eye: {
+      title:
+        "Would you like to protect your eyes from light emanating from screens?",
+      screenName: "blue_light",
+      answers: [
+        {
+          id: nanoid(),
+          text: "Yes",
+        },
+        {
+          id: nanoid(),
+          text: "No",
+        },
+      ],
+    },
+    sun: {
+      title: "When you’re out and about, which shade of lenses do you prefer?",
+      screenName: "shade",
+      answers: [
+        {
+          id: nanoid(),
+          text: "Dark Shade",
+          img: darkShade,
+        },
+        {
+          id: nanoid(),
+          text: "Light Shade",
+          img: lightShade,
+        },
+        {
+          id: nanoid(),
+          text: "Transitioning Shade",
+          img: transShade,
+        },
+      ],
+    },
+  },
+  {
+    title: "Every face shape has a perfect fit. What’s yours?",
+    screenName: "face_shape",
+    answers: [
+      {
+        id: nanoid(),
+        text: "I have a long face",
+        img: {
+          men: menLong,
+          woman: womanLong,
+          both: bothLong,
+        },
+      },
+      {
+        id: nanoid(),
+        text: "I have a round face",
+        img: {
+          men: menRound,
+          woman: womanRound,
+          both: bothRound,
+        },
+      },
+      {
+        id: nanoid(),
+        text: "In between",
+        img: {
+          men: menBoth,
+          woman: womanBoth,
+          both: bothBoth,
+        },
+      },
+    ],
+    bottomText: "I don’t know",
+  },
+  {
+    screenName: "facial_features",
+  },
+  {
+    screenName: "shape",
+  },
+  {
+    title: "Are you looking for any particular eyewear brands?",
+  },
+  {
+    screenName: "brand",
   },
 ];
 

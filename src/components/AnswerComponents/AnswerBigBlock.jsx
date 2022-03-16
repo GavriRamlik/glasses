@@ -9,7 +9,8 @@ export default function AnswerBigBlock({
   inputName,
   handleChange,
   checkChecked,
-  handleClick,
+  handleClick, // we accept clickHandler because i want that user can press checked input and go to the next screen
+  value,
 }) {
   const style = {
     block: {
@@ -30,9 +31,9 @@ export default function AnswerBigBlock({
         type='radio'
         className='input peer'
         name={inputName}
-        value={text}
+        value={value}
         onChange={handleChange}
-        checked={checkChecked(inputName, text)}
+        checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
       <div

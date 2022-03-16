@@ -13,20 +13,21 @@ export default function Screen2({
   const info = data[count - 1];
   return (
     <>
-      <Title margin='24' width='243' text={info.title} />
+      <Title margin='32' width='243' text={info.title} />
       {info.answers.map((elem) => (
         <AnswerBigBlock
           key={elem.id}
           text={elem.text}
+          value={elem.value}
           img={
-            data[0].answers[0].text === formData.screen1
-              ? elem.img.woman
-              : elem.img.men
+            elem.img[formData.gender]
+              ? elem.img[formData.gender]
+              : elem.img["4"]
           }
-          marginBetween={elem.marginBetween}
+          marginBetween={"18"}
           handleClick={setCount}
           handleChange={handleChange}
-          inputName={`screen${count}`}
+          inputName={info.screenName}
           checkChecked={checkChecked}
         />
       ))}
@@ -34,7 +35,7 @@ export default function Screen2({
         text={info.bottomText}
         handleClick={setCount}
         handleChange={handleChange}
-        inputName={`screen${count}`}
+        inputName={info.screenName}
         checkChecked={checkChecked}
       />
     </>
