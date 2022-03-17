@@ -28,10 +28,10 @@ export default function Screen3({
   } else if (additionalScreen) {
     componentToRender = (
       <>
-        <Title margin='23' text={info.anotherScreen.title} width='auto' />
+        <Title margin="23" text={info.anotherScreen.title} width="auto" />
         {info.anotherScreen.answers.map((elem) => (
           <AnswerBigBlock
-            height='84'
+            height="84"
             key={elem.id}
             text={elem.text}
             value={elem.value}
@@ -53,7 +53,7 @@ export default function Screen3({
   } else {
     componentToRender = (
       <>
-        <Title margin='32' width='auto' text={info.title} />
+        <Title width="auto" text={info.title} />
         {info.answers.map((elem) => {
           if (elem.additionalScreen) {
             clickHandler = showAdditionalScreen;
@@ -62,7 +62,7 @@ export default function Screen3({
           }
           return (
             <AnswerBigBlock
-              height='120'
+              height="120"
               key={elem.id}
               text={elem.text}
               handleClick={clickHandler}

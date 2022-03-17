@@ -6,6 +6,7 @@ import Screen3 from "./screens/Screen3";
 import Screen4 from "./screens/Screen4";
 import Screen5 from "./screens/Screen5";
 import Screen6 from "./screens/Screen6";
+import Screen7 from "./screens/Screen7";
 function Question({ setCount, count, formData, setFormData }) {
   const indexCount = count - 1; // array index
   const checkChecked = (name, str) => formData[name] === str;
@@ -80,6 +81,16 @@ function Question({ setCount, count, formData, setFormData }) {
           handleChange={handleChange}
           checkChecked={checkChecked}
           formData={formData}
+        />
+      ),
+    },
+    {
+      question: count && (
+        <Screen7
+          count={count}
+          setCount={setCount}
+          handleChange={handleChange}
+          checkChecked={checkChecked}
         />
       ),
     },

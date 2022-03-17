@@ -155,10 +155,12 @@ const data = [
         {
           id: nanoid(),
           text: "Yes",
+          value: "true",
         },
         {
           id: nanoid(),
           text: "No",
+          value: "false",
         },
       ],
     },
@@ -170,16 +172,19 @@ const data = [
           id: nanoid(),
           text: "Dark Shade",
           img: darkShade,
+          value: "dark",
         },
         {
           id: nanoid(),
           text: "Light Shade",
           img: lightShade,
+          value: "light",
         },
         {
           id: nanoid(),
           text: "Transitioning Shade",
           img: transShade,
+          value: "transition",
         },
       ],
     },
@@ -196,6 +201,7 @@ const data = [
           woman: womanLong,
           both: bothLong,
         },
+        value:"long",
       },
       {
         id: nanoid(),
@@ -205,6 +211,7 @@ const data = [
           woman: womanRound,
           both: bothRound,
         },
+        value:"round",
       },
       {
         id: nanoid(),
@@ -214,22 +221,42 @@ const data = [
           woman: womanBoth,
           both: bothBoth,
         },
+        value:"between",
       },
     ],
     bottomText: "I don’t know",
   },
   {
+    title: "How would you define your facial features?",
     screenName: "facial_features",
+    answers: [
+      {
+        id: nanoid(),
+        text: "Sharp",
+        value: "sharp",
+      },
+      {
+        id: nanoid(),
+        text: "Rounded",
+        value: "rounded",
+      },
+      {
+        id: nanoid(),
+        text: "In between",
+        value: "between",
+      },
+    ],
+    bottomText: "I don’t know",
   },
-  {
-    screenName: "shape",
-  },
-  {
-    title: "Are you looking for any particular eyewear brands?",
-  },
-  {
-    screenName: "brand",
-  },
+  // {
+  //   screenName: "shape",
+  // },
+  // {
+  //   title: "Are you looking for any particular eyewear brands?",
+  // },
+  // {
+  //   screenName: "brand",
+  // },
 ];
 
 export default data;

@@ -1,6 +1,5 @@
 import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
 import Title from "../AnswerComponents/Title";
-import BottomText from "../AnswerComponents/BottomText";
 import data from "../../data";
 import HorizontalImgBlock from "../AnswerComponents/HorizontalImgBlock";
 export default function Screen5({
@@ -10,34 +9,35 @@ export default function Screen5({
   checkChecked,
   formData,
 }) {
-  const eyeScreen = formData.screen2 === data[1].answers[0].text;
+  const eyeScreen = formData.eyewear_type === "210";
   const info = eyeScreen ? data[count - 1].eye : data[count - 1].sun;
   return eyeScreen ? (
     <>
-      <Title margin='32' width='330' text={info.title} />
+      <Title width="330" text={info.title} />
       {info.answers.map((elem) => (
         <AnswerBigBlock
           key={elem.id}
           text={elem.text}
-          img={elem.img}
           handleClick={setCount}
           handleChange={handleChange}
-          inputName={`screen${count}`}
+          value={elem.value}
+          inputName={info.screenName}
           checkChecked={checkChecked}
         />
       ))}
     </>
   ) : (
     <>
-      <Title margin='32' width='330' text={info.title} />
+      <Title width="330" text={info.title} />
       {info.answers.map((elem) => (
         <HorizontalImgBlock
           key={elem.id}
           text={elem.text}
           img={elem.img}
+          value={elem.value}
           handleClick={setCount}
           handleChange={handleChange}
-          inputName={`screen${count}`}
+          inputName={info.screenName}
           checkChecked={checkChecked}
         />
       ))}

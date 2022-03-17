@@ -25,15 +25,15 @@ export default function Screen4({
   const info = data[count - 1];
   return additionalScreen ? (
     visible ? (
-      <PreScreen text='No worries, we’ve got you!' />
+      <PreScreen text="No worries, we’ve got you!" />
     ) : (
       <>
-        <Title margin='32' text={info.anotherScreen.title} width='210' />
+        <Title text={info.anotherScreen.title} width="210" />
         {info.anotherScreen.answers.map((elem) => (
           <AnswerBigBlock
             key={elem.id}
-            height='84'
-            margin='11'
+            height="84"
+            margin="11"
             text={elem.text}
             value={elem.value}
             handleClick={setCount}
@@ -49,14 +49,14 @@ export default function Screen4({
           handleChange={handleChange}
           inputName={info.screenName}
           checkChecked={checkChecked}
-          value='none'
+          value="none"
         />
       </>
     )
   ) : (
     <>
-      <Title margin='38' width='210' text={info.title} />
-      <img src={lense} alt='lense' className='mb-[35px] h-[118px]' />
+      <Title margin="38" width="210" text={info.title} />
+      <img src={lense} alt="lense" className="mb-[35px] h-[118px]" />
       {info.answers.map((elem) => (
         <SmallBlock
           key={elem.id}

@@ -1,4 +1,3 @@
-import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
 import Title from "../AnswerComponents/Title";
 import BottomText from "../AnswerComponents/BottomText";
 import data from "../../data";
@@ -12,36 +11,39 @@ export default function Screen6({
   formData,
 }) {
   const info = data[count - 1];
+  let imgData;
+  let width = "95";
+  let marginLeft = "24";
+  let fontSize = "18";
   return (
     <>
-      <Title margin='24' width='243' text={info.title} />
+      <Title width="243" text={info.title} />
       {info.answers.map((elem) => {
-        let imgData;
-        let width = "95";
-        let marginLeft = "24";
-        if (data[0].answers[0].text === formData.screen1) {
+        if (formData.gender === "5") {
           imgData = elem.img.woman;
-        } else if (data[0].answers[1].text === formData.screen1) {
+        } else if (formData.gender === "4") {
           imgData = elem.img.men;
         } else {
           imgData = elem.img.both;
           marginLeft = "15";
           width = "118";
+          fontSize = "18";
         }
         return (
           <HorizontalImgBlock
             marginLeft={marginLeft}
             margin={"14"}
-            fontSize={"17"}
+            fontSize={fontSize}
             width={"314"}
             key={elem.id}
             text={elem.text}
             img={imgData}
             imgWidth={width}
+            value={elem.value}
             marginBetween={"12"}
             handleClick={setCount}
             handleChange={handleChange}
-            inputName={`screen${count}`}
+            inputName={info.screenName}
             checkChecked={checkChecked}
           />
         );
@@ -50,7 +52,7 @@ export default function Screen6({
         text={info.bottomText}
         handleClick={setCount}
         handleChange={handleChange}
-        inputName={`screen${count}`}
+        inputName={info.screenName}
         checkChecked={checkChecked}
       />
     </>
