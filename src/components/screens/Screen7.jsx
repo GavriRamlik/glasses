@@ -10,13 +10,13 @@ export default function Screen7({
   checkChecked,
 }) {
   const info = data[count - 1];
-  console.log("hu");
   return (
     <>
-      <Title margin="32" width="240" text={info.title} />
+      <Title margin='32' width='240' text={info.title} />
       {info.answers.map((elem) => (
         <AnswerBigBlock
-          height="97"
+          width='314'
+          height='97'
           key={elem.id}
           text={elem.text}
           handleClick={setCount}

@@ -6,8 +6,7 @@ import data from "../data";
 
 function Quiz({ setStartToTrue }) {
   const [count, setCount] = useState(1);
-  const formNames = {};
-  const [formData, setFormData] = useState(formNames);
+  const [formData, setFormData] = useState({});
   console.log(formData);
   const end = data.length + 1 === count; // defines end of quizz
   if (count === 0) {
@@ -21,24 +20,24 @@ function Quiz({ setStartToTrue }) {
     <h1>end</h1>
   ) : (
     <>
-      <header className="px-[23px] h-[58px] flex items-center justify-between bg-white relative">
+      <header className='px-[23px] h-[58px] flex items-center justify-between bg-white relative'>
         <button onClick={() => setCount((prev) => prev - 1)}>
-          <img src={arrow_left} alt="back" />
+          <img src={arrow_left} alt='back' />
         </button>
-        <p className="font-open text-[18px] leading-[19px] text-[#3C5060]">
+        <p className='font-open text-[18px] leading-[19px] text-[#3C5060]'>
           {count}/{data.length}
         </p>
         <button onClick={setStartToTrue}>
-          <img src={exit} alt="exit" />
+          <img src={exit} alt='exit' />
         </button>
-        <span className="absolute bottom-[-8px] left-0 right-0 bg-[#D8D8D8] w-full h-2 overflow-hidden">
+        <span className='absolute bottom-[-8px] left-0 right-0 bg-[#D8D8D8] w-full h-2 overflow-hidden'>
           <div
             className={`transition-all h-full w-[100%] absolute rounded-[3px]`}
             style={progressLine}
           ></div>
         </span>
       </header>
-      <form className="mt-[50px] flex flex-col items-center relative h-[505px]">
+      <form className=' flex flex-col items-center relative h-[562px]'>
         <Question
           setCount={() => setCount((prev) => prev + 1)}
           count={count}

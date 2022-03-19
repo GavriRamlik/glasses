@@ -38,11 +38,14 @@
   .answer-text {
     @apply font-semibold text-[18px] leading-[25px] text-textAnswer;
   }
-}
-#glasses-quiz-widget {
-  @apply bg-white;
-}
-.input {
-  @apply w-px h-px overflow-hidden absolute;
-  clip: rect(0, 0, 0, 0);
+  #glasses-quiz-widget {
+    @apply bg-white;
+  }
+  .input {
+    @apply w-px h-px overflow-hidden absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+  .slider {
+    grid-template-columns: repeat(4, 160px);
+  }
 }

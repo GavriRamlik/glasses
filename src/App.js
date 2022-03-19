@@ -6,7 +6,6 @@ import Quiz from "./components/Quiz";
 
 function App() {
   const [startScrenn, setStartScreen] = useState(true);
-
   const style = {
     background: startScrenn
       ? "linear-gradient(180deg, #E8F0F2 0%, rgba(232, 240, 242, 0) 100%)"

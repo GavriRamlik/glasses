@@ -17,7 +17,18 @@ import womanBoth from "./images/sixth_ques/womanBoth.svg";
 import bothLong from "./images/sixth_ques/bothLong.svg";
 import bothRound from "./images/sixth_ques/bothRound.svg";
 import bothBoth from "./images/sixth_ques/bothBoth.svg";
-
+import rectangle from "./images/eight_ques/rectangle.jpg";
+import aviator from "./images/eight_ques/aviator.jpg";
+import catEye from "./images/eight_ques/catEye.jpg";
+import geometric from "./images/eight_ques/geometric.jpg";
+import oval from "./images/eight_ques/oval.jpg";
+import oversized from "./images/eight_ques/oversized.jpg";
+import rimless from "./images/eight_ques/rimless.jpg";
+import round from "./images/eight_ques/round.jpg";
+import browline from "./images/eight_ques/browline.jpg";
+import square from "./images/eight_ques/square.jpg";
+import wayframe from "./images/eight_ques/wayframe.jpg";
+import wrap from "./images/eight_ques/wrap.jpg";
 const data = [
   {
     title: "You are looking for",
@@ -201,7 +212,7 @@ const data = [
           woman: womanLong,
           both: bothLong,
         },
-        value:"long",
+        value: "long",
       },
       {
         id: nanoid(),
@@ -211,7 +222,7 @@ const data = [
           woman: womanRound,
           both: bothRound,
         },
-        value:"round",
+        value: "round",
       },
       {
         id: nanoid(),
@@ -221,7 +232,7 @@ const data = [
           woman: womanBoth,
           both: bothBoth,
         },
-        value:"between",
+        value: "between",
       },
     ],
     bottomText: "I don’t know",
@@ -248,9 +259,84 @@ const data = [
     ],
     bottomText: "I don’t know",
   },
-  // {
-  //   screenName: "shape",
-  // },
+  {
+    title: "Which frame style are you looking for?",
+    screenName: "shape",
+    answers: [
+      {
+        id: nanoid(),
+        text: "Rectangle",
+        value: "rectangle",
+        img: rectangle,
+      },
+      {
+        id: nanoid(),
+        text: "Wayframe",
+        value: "wayframe",
+        img: wayframe,
+      },
+      {
+        id: nanoid(),
+        text: "Cat eye",
+        value: "cat_eye",
+        img: catEye,
+      },
+      {
+        id: nanoid(),
+        text: "Browline",
+        value: "browline",
+        img: browline,
+      },
+      {
+        id: nanoid(),
+        text: "Round",
+        value: "round",
+        img: round,
+      },
+      {
+        id: nanoid(),
+        text: "Rimless",
+        value: "rimless",
+        img: rimless,
+      },
+      {
+        id: nanoid(),
+        text: "Aviator",
+        value: "aviator",
+        img: aviator,
+      },
+      {
+        id: nanoid(),
+        text: "Oval",
+        value: "oval",
+        img: oval,
+      },
+      {
+        id: nanoid(),
+        text: "Square",
+        value: "square",
+        img: square,
+      },
+      {
+        id: nanoid(),
+        text: "Geometric",
+        value: "geometric",
+        img: geometric,
+      },
+      {
+        id: nanoid(),
+        text: "Oversized",
+        value: "oversized",
+        img: oversized,
+      },
+      {
+        id: nanoid(),
+        text: "Wrap",
+        value: "wrap",
+        img: wrap,
+      },
+    ],
+  },
   // {
   //   title: "Are you looking for any particular eyewear brands?",
   // },

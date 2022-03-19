@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 
 export default function AnswerBigBlock({
-  margin = "14", //distance between blocks
-  height = "138",
   text = "",
   img,
-  width = "274",
   marginBetween, // distance between content
   inputName,
   handleChange,
@@ -13,16 +10,6 @@ export default function AnswerBigBlock({
   handleClick, // we accept clickHandler because i want that user can press checked input and go to the next screen
   value,
 }) {
-  const style = {
-    block: {
-      height: `${height}px`,
-      marginBottom: `${margin}px`,
-      width: `${width}px`,
-    },
-    text: {
-      marginTop: img ? `${marginBetween}px` : "0",
-    },
-  };
   return (
     <motion.label
       initial={{ opacity: 0 }}
@@ -30,7 +17,7 @@ export default function AnswerBigBlock({
       exit={{ opacity: 0 }}
     >
       <input
-        type='radio'
+        type='checkbox'
         className='input peer'
         name={inputName}
         value={value}
@@ -38,12 +25,9 @@ export default function AnswerBigBlock({
         checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
-      <div
-        className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner'
-        style={style.block}
-      >
-        {img && <img src={img} alt={text} />}
-        <p className=' answer-text' style={style.text}>
+      <div className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner w-[160px] h-[103px]'>
+        <img src={img} alt={text} />
+        <p className='answer-text mt-[8px] text-[13px] text-description'>
           {text}
         </p>
       </div>
