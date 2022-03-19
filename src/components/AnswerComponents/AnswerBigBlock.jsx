@@ -12,6 +12,7 @@ export default function AnswerBigBlock({
   checkChecked,
   handleClick, // we accept clickHandler because i want that user can press checked input and go to the next screen
   value,
+  input = true,
 }) {
   const style = {
     block: {
@@ -23,24 +24,29 @@ export default function AnswerBigBlock({
       marginTop: img ? `${marginBetween}px` : "0",
     },
   };
+  console.log();
   return (
     <motion.label
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <input
-        type='radio'
-        className='input peer'
-        name={inputName}
-        value={value}
-        onChange={handleChange}
-        checked={checkChecked(inputName, value)}
-        onClick={handleClick}
-      />
+      {input && (
+        <input
+          type='radio'
+          className='input peer'
+          name={inputName}
+          value={value}
+          onChange={handleChange}
+          checked={checkChecked(inputName, value)}
+          onClick={handleClick}
+        />
+      )}
+
       <div
-        className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner'
+        className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner'
         style={style.block}
+        onClick={input ? () => {} : handleClick}
       >
         {img && <img src={img} alt={text} />}
         <p className=' answer-text' style={style.text}>

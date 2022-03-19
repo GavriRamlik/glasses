@@ -13,7 +13,7 @@ export default function Screen2({
   const info = data[count - 1];
   return (
     <>
-      <Title width="243" text={info.title} />
+      <Title width='243' text={info.title} />
       {info.answers.map((elem) => (
         <AnswerBigBlock
           key={elem.id}

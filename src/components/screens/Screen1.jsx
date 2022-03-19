@@ -9,6 +9,7 @@ export default function Screen1({
   checkChecked,
 }) {
   const info = data[count - 1];
+  console.log(info);
   return (
     <>
       <Title margin='24' width='238' text={info.title} />

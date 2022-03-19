@@ -17,7 +17,7 @@ export default function Screen6({
   let fontSize = "18";
   return (
     <>
-      <Title width="243" text={info.title} />
+      <Title width='243' text={info.title} />
       {info.answers.map((elem) => {
         if (formData.gender === "5") {
           imgData = elem.img.woman;

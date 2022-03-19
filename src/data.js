@@ -1,13 +1,20 @@
 import { nanoid } from "nanoid";
+//1
 import womanImg from "./images/first_ques/woman.svg";
 import manImg from "./images/first_ques/men.svg";
+
+//2
 import womanEye from "./images/second_ques/womenEyeglasses.svg";
 import menEye from "./images/second_ques/menEyeglasses.svg";
 import womanSun from "./images/second_ques/womenSunglasses.svg";
 import menSun from "./images/second_ques/menSunglasses.svg";
+
+//5
 import darkShade from "./images/fifth_ques/darkShade.svg";
 import lightShade from "./images/fifth_ques/lightShade.svg";
 import transShade from "./images/fifth_ques/transShade.svg";
+
+//6
 import menLong from "./images/sixth_ques/menOval.svg";
 import menRound from "./images/sixth_ques/menRound.svg";
 import menBoth from "./images/sixth_ques/menBoth.svg";
@@ -17,6 +24,8 @@ import womanBoth from "./images/sixth_ques/womanBoth.svg";
 import bothLong from "./images/sixth_ques/bothLong.svg";
 import bothRound from "./images/sixth_ques/bothRound.svg";
 import bothBoth from "./images/sixth_ques/bothBoth.svg";
+
+//8
 import rectangle from "./images/eight_ques/rectangle.jpg";
 import aviator from "./images/eight_ques/aviator.jpg";
 import catEye from "./images/eight_ques/catEye.jpg";
@@ -29,6 +38,21 @@ import browline from "./images/eight_ques/browline.jpg";
 import square from "./images/eight_ques/square.jpg";
 import wayframe from "./images/eight_ques/wayframe.jpg";
 import wrap from "./images/eight_ques/wrap.jpg";
+
+//10
+import armani from "./images/tenth_ques/armani_exchange.svg";
+import burberry from "./images/tenth_ques/burberry.svg";
+import coach from "./images/tenth_ques/coach.svg";
+import gucci from "./images/tenth_ques/gucci.svg";
+import hillary from "./images/tenth_ques/hillary_duff.svg";
+import michael from "./images/tenth_ques/michael_kors.svg";
+import oakley from "./images/tenth_ques/oakley.svg";
+import prada from "./images/tenth_ques/prada.svg";
+import rayban from "./images/tenth_ques/ray_ban.svg";
+import tory from "./images/tenth_ques/tory_burch.svg";
+import versace from "./images/tenth_ques/versace.svg";
+import vogue from "./images/tenth_ques/vogue.svg";
+
 const data = [
   {
     title: "You are looking for",
@@ -337,12 +361,86 @@ const data = [
       },
     ],
   },
-  // {
-  //   title: "Are you looking for any particular eyewear brands?",
-  // },
-  // {
-  //   screenName: "brand",
-  // },
+  {
+    title: "Are you looking for any particular eyewear brands?",
+    answers: [
+      {
+        id: nanoid(),
+        text: "Yes, I have some in mind",
+        brands: true,
+      },
+      {
+        id: nanoid(),
+        text: "No, brand isn't important",
+      },
+    ],
+  },
+  {
+    title: "Choose your favorite brands",
+    screenName: "brand",
+    answers: [
+      {
+        id: nanoid(),
+        img: rayban,
+        value: "ray_ban",
+      },
+      {
+        id: nanoid(),
+        img: hillary,
+        value: "hillary_duff",
+      },
+      {
+        id: nanoid(),
+        img: michael,
+        value: "michael_kors",
+      },
+      {
+        id: nanoid(),
+        img: oakley,
+        value: "oakley",
+      },
+      {
+        id: nanoid(),
+        img: prada,
+        value: "prada",
+      },
+      {
+        id: nanoid(),
+        img: coach,
+        value: "coach",
+      },
+      {
+        id: nanoid(),
+        img: gucci,
+        value: "gucci",
+      },
+      {
+        id: nanoid(),
+        img: versace,
+        value: "versace",
+      },
+      {
+        id: nanoid(),
+        img: tory,
+        value: "tory_burch",
+      },
+      {
+        id: nanoid(),
+        img: armani,
+        value: "armani",
+      },
+      {
+        id: nanoid(),
+        img: vogue,
+        value: "vogue",
+      },
+      {
+        id: nanoid(),
+        img: burberry,
+        value: "burberry",
+      },
+    ],
+  },
 ];
 
 export default data;
