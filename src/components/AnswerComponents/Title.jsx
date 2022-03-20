@@ -2,7 +2,7 @@ export default function Title({
   margin = "32",
   text = "",
   width = "",
-  marginTop = "50",
+  marginTop = "58",
 }) {
   const style = {
     marginBottom: `${margin}px`,

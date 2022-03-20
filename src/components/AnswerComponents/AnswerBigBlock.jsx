@@ -24,7 +24,6 @@ export default function AnswerBigBlock({
       marginTop: img ? `${marginBetween}px` : "0",
     },
   };
-  console.log();
   return (
     <motion.label
       initial={{ opacity: 0 }}

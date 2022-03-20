@@ -6,7 +6,7 @@ import { useTimeout } from "usehooks-ts";
 import { useState } from "react";
 import PreScreen from "../AnswerComponents/PreScreen";
 
-export default function Screen3({
+export default function Lenstype({
   count,
   setCount,
   handleChange,
@@ -72,7 +72,8 @@ export default function Screen3({
               handleChange={handleChange}
               inputName={info.screenName}
               checkChecked={checkChecked}
-              value={"none"}
+              value={"skip"}
+              input={false}
             />
           );
         })}

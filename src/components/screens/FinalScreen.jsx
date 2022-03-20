@@ -29,7 +29,7 @@ export default function Screen10({ clickHandler }) {
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className='mt-[46px] flex flex-col items-center relative h-[500px] pr-3'
+        className='mt-[46px] flex flex-col items-center relative h-[500px]'
       >
         <div
           className='flex items-center justify-center bg-[#F7F8F9] mx-auto rounded-full w-[131px] h-[131px] mb-[33px]'

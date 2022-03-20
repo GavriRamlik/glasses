@@ -1,19 +1,22 @@
-import { useState, useEffect } from "react";
+import Gender from "./screens/Gender";
+import EyewearType from "./screens/EyewearType";
+import Lenstype from "./screens/Lenstype";
+import FrameSize from "./screens/FrameSize";
+import ShadeOrBlueLight from "./screens/ShadeOrBlueLight";
+import FaseShape from "./screens/FaceShape";
+import FacialFeatures from "./screens/FacialFeatures";
+import Shape from "./screens/Shape";
+import ShowBrand from "./screens/ShowBrand";
+import Brand from "./screens/Brand";
 import data from "../data";
-import Screen1 from "./screens/Screen1";
-import Screen2 from "./screens/Screen2";
-import Screen3 from "./screens/Screen3";
-import Screen4 from "./screens/Screen4";
-import Screen5 from "./screens/Screen5";
-import Screen6 from "./screens/Screen6";
-import Screen7 from "./screens/Screen7";
-import Screen8 from "./screens/Screen8";
-import Screen9 from "./screens/Screen9";
-import Screen10 from "./screens/Screen10";
 function Question({ setCount, count, formData, setFormData }) {
   const indexCount = count - 1; // array index
   const checkChecked = (name, str) => {
     return formData[name] === str;
+  };
+  const addOne = () => setCount((prev) => prev + 1);
+  const lastScreen = () => {
+    setCount(data.length + 1);
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,115 +28,75 @@ function Question({ setCount, count, formData, setFormData }) {
     });
   };
   const componentsData = [
-    {
-      question: count && ( // program dont crash when count = 0
-        <Screen1
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-        />
-      ),
-    },
-
-    {
-      question: count && (
-        <Screen2
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-          formData={formData}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen3
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen4
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen5
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-          formData={formData}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen6
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-          formData={formData}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen7
-          count={count}
-          setCount={setCount}
-          handleChange={handleChange}
-          checkChecked={checkChecked}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen8
-          count={count}
-          setCount={setCount}
-          checkChecked={checkChecked}
-          formData={formData}
-          setFormData={setFormData}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen9
-          count={count}
-          setCount={setCount}
-          checkChecked={checkChecked}
-          formData={formData}
-          setFormData={setFormData}
-        />
-      ),
-    },
-    {
-      question: count && (
-        <Screen10
-          count={count}
-          setCount={setCount}
-          checkChecked={checkChecked}
-          formData={formData}
-          setFormData={setFormData}
-        />
-      ),
-    },
+    <Gender
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+    />,
+    <EyewearType
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+      formData={formData}
+    />,
+    <Lenstype
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+    />,
+    <FrameSize
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+    />,
+    <ShadeOrBlueLight
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+      formData={formData}
+    />,
+    <FaseShape
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+      formData={formData}
+    />,
+    <FacialFeatures
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+    />,
+    <Shape
+      count={count}
+      setCount={addOne}
+      checkChecked={checkChecked}
+      formData={formData}
+      setFormData={setFormData}
+    />,
+    <ShowBrand
+      count={count}
+      setCount={addOne}
+      checkChecked={checkChecked}
+      formData={formData}
+      setFormData={setFormData}
+      setLastScreen={lastScreen}
+    />,
+    <Brand
+      count={count}
+      setCount={addOne}
+      checkChecked={checkChecked}
+      formData={formData}
+      setFormData={setFormData}
+    />,
   ];
-  return <>{count && componentsData[indexCount].question}</>;
+  return componentsData[indexCount];
 }
 
 export default Question;

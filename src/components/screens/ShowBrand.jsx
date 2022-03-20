@@ -1,12 +1,7 @@
 import Title from "../AnswerComponents/Title";
 import data from "../../data";
 import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
-export default function Screen9({
-  count,
-  setCount,
-  handleChange,
-  checkChecked,
-}) {
+export default function ShowBrand({ count, setCount, setLastScreen }) {
   const info = data[count - 1];
   let handleClick;
   return (
@@ -16,7 +11,7 @@ export default function Screen9({
         if (elem.brands) {
           handleClick = setCount;
         } else {
-          // handleClick =
+          handleClick = setLastScreen;
         }
         return (
           <AnswerBigBlock

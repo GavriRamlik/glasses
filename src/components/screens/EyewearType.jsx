@@ -1,29 +1,34 @@
+import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
 import Title from "../AnswerComponents/Title";
 import BottomText from "../AnswerComponents/BottomText";
 import data from "../../data";
-import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
 
-export default function Screen7({
+export default function EyewearType({
   count,
   setCount,
   handleChange,
   checkChecked,
+  formData,
 }) {
   const info = data[count - 1];
   return (
     <>
-      <Title margin='32' width='240' text={info.title} />
+      <Title width='243' text={info.title} />
       {info.answers.map((elem) => (
         <AnswerBigBlock
-          width='314'
-          height='97'
           key={elem.id}
           text={elem.text}
+          value={elem.value}
+          img={
+            elem.img[formData.gender]
+              ? elem.img[formData.gender]
+              : elem.img["4"]
+          }
+          marginBetween={"18"}
           handleClick={setCount}
           handleChange={handleChange}
           inputName={info.screenName}
           checkChecked={checkChecked}
-          value={elem.value}
         />
       ))}
       <BottomText

@@ -4,21 +4,36 @@ import hero from "./images/start_screen/hero.png";
 import { useState } from "react";
 import Quiz from "./components/Quiz";
 
+const widget = document.getElementById("glasses-quiz-widget");
+let dataAttr = widget.dataset.source;
 function App() {
   const [startScrenn, setStartScreen] = useState(true);
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     shape: [],
     brand: [],
-  });
+  };
+  const [formData, setFormData] = useState(initialFormData);
   console.log(formData);
+  const clearFormData = () => setFormData(initialFormData);
   const style = {
     background: startScrenn
       ? "linear-gradient(180deg, #E8F0F2 0%, rgba(232, 240, 242, 0) 100%)"
       : "#F7F8F9",
   };
   const submitHandler = (e) => {
+    let url = dataAttr + "?";
     e.preventDefault();
-    console.log("URL");
+    for (const [key, value] of Object.entries(formData)) {
+      if (value !== "skip" && value !== "none" && value.length !== 0) {
+        url += `${key}=${value}&`;
+      }
+    }
+    url = url.slice(0, url.length - 1); // delete last ampersant
+    console.log(url);
+  };
+  const clearAnswers = () => {
+    setStartScreen(true);
+    clearFormData();
   };
   return (
     <form
@@ -54,7 +69,7 @@ function App() {
         </>
       ) : (
         <Quiz
-          setStartToTrue={() => setStartScreen(true)}
+          clearAnswers={clearAnswers}
           formData={formData}
           setFormData={setFormData}
         />

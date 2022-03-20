@@ -2,7 +2,7 @@ import AnswerBigBlock from "../AnswerComponents/AnswerBigBlock";
 import Title from "../AnswerComponents/Title";
 import data from "../../data";
 import HorizontalImgBlock from "../AnswerComponents/HorizontalImgBlock";
-export default function Screen5({
+export default function ShadeOrBlueLight({
   count,
   setCount,
   handleChange,
@@ -11,7 +11,6 @@ export default function Screen5({
 }) {
   const eyeScreen = formData.eyewear_type === "210";
   const info = eyeScreen ? data[count - 1].eye : data[count - 1].sun;
-
   return eyeScreen ? (
     <>
       <Title width='330' text={info.title} />

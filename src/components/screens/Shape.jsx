@@ -2,7 +2,7 @@ import Title from "../AnswerComponents/Title";
 import data from "../../data";
 import Slide from "../AnswerComponents/Slide";
 import ScrollContainer from "react-indiana-drag-scroll";
-export default function Screen8({
+export default function Shape({
   count,
   setCount,
   checkChecked,

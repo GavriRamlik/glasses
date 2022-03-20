@@ -10,7 +10,6 @@ export default function Slide({
 }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(value);
     setFormData((prev) => {
       let arr = [...prev[name]]; //get unchanged array
       const index = arr.indexOf(value); // get index of the value in arr

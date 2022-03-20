@@ -3,7 +3,7 @@ import BottomText from "../AnswerComponents/BottomText";
 import data from "../../data";
 import HorizontalImgBlock from "../AnswerComponents/HorizontalImgBlock";
 
-export default function Screen6({
+export default function FaceShape({
   count,
   setCount,
   handleChange,

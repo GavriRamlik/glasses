@@ -7,7 +7,7 @@ import lense from "../../images/fourth_ques/lense.svg";
 import { useState, useEffect } from "react";
 import PreScreen from "../AnswerComponents/PreScreen";
 
-export default function Screen4({
+export default function FrameSize({
   count,
   setCount,
   handleChange,
@@ -50,7 +50,7 @@ export default function Screen4({
           handleChange={handleChange}
           inputName={info.screenName}
           checkChecked={checkChecked}
-          value='none'
+          value="none"
         />
       </>
     )
