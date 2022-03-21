@@ -13,7 +13,6 @@ function App() {
     brand: [],
   };
   const [formData, setFormData] = useState(initialFormData);
-  console.log(formData);
   const clearFormData = () => setFormData(initialFormData);
   const style = {
     background: startScrenn
@@ -21,8 +20,8 @@ function App() {
       : "#F7F8F9",
   };
   const submitHandler = (e) => {
-    let url = dataAttr + "?";
     e.preventDefault();
+    let url = dataAttr + "?";
     for (const [key, value] of Object.entries(formData)) {
       if (value !== "skip" && value !== "none" && value.length !== 0) {
         url += `${key}=${value}&`;
