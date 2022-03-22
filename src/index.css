@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap");
-
+:root {
+  --header: 58px;
+}
 @layer components {
   .btn {
     background: linear-gradient(270deg, #45c7fa 0%, #2196f3 100%);
@@ -33,7 +35,7 @@
   }
 
   .title {
-    @apply font-open font-bold text-2xl leading-[31px] text-blue;
+    @apply font-open font-bold text-2xl leading-[31px] text-blue text-center;
   }
   .question-title {
     @apply font-light text-xl leading-[29px] text-quesTitle;
@@ -55,7 +57,7 @@
     @apply font-semibold text-[18px] leading-[25px] text-textAnswer;
   }
   #glasses-quiz-widget {
-    @apply bg-white;
+    @apply bg-white w-full md:max-w-[750px] overflow-hidden;
   }
 
   .input {

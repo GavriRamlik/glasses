@@ -1,8 +1,8 @@
-import Title from "../AnswerComponents/Title";
-import data from "../../data";
-import Slide from "../AnswerComponents/Slide";
+import Title from "../../AnswerComponents/Title";
+import data from "../../../data";
+import Slide from "../../AnswerComponents/Slide";
 import ScrollContainer from "react-indiana-drag-scroll";
-export default function Brand({
+export default function Shape({
   count,
   setCount,
   checkChecked,
@@ -12,15 +12,16 @@ export default function Brand({
   const info = data[count - 1];
   return (
     <>
-      <Title margin='10' marginTop='38' width='341' text={info.title} />
+      <Title marginBot='10' marginTop='38' text={info.title} />
       <p className='mb-2 text-base leading-[30px] text-description'>
         You can pick more than one.
       </p>
-      <ScrollContainer className='w-full grid grid-rows-3 gap-[10px] slider px-3 py-3'>
+      <ScrollContainer className='max-w-full grid grid-rows-3 gap-[10px] slider py-3 justify-items-center px-1'>
         {info.answers.map((elem) => (
           <Slide
             key={elem.id}
             img={elem.img}
+            text={elem.text}
             handleClick={setCount}
             inputName={info.screenName}
             checkChecked={checkChecked}

@@ -47,10 +47,10 @@ export default function Screen10({ clickHandler }) {
           Send
         </button>
         <p className='absolute bottom-0 leading-[14px] text-grayDark text-center text-xs font-roboto mx-[44px]'>
-          By clicking ‘Send’ you agree to our{" "}
+          By clicking ‘Send’ you agree to our
           <a href='/' className='hover:underline'>
             Terms of Use & Privacy Policy
-          </a>{" "}
+          </a>
           and receiving promotion emails
         </p>
       </motion.main>

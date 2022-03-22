@@ -1,13 +1,11 @@
 export default function Title({
-  margin = "32",
+  marginBot = "32",
   text = "",
-  width = "",
   marginTop = "58",
+  marginX = "0",
 }) {
   const style = {
-    marginBottom: `${margin}px`,
-    width: width ? `${width}px` : "auto",
-    marginTop: `${marginTop}px`,
+    margin: `${marginTop}px ${marginX}px ${marginBot}px`,
   };
   return (
     <h2 className={`question-title text-center`} style={style}>

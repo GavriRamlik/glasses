@@ -1,13 +1,13 @@
-import Gender from "./screens/Gender";
-import EyewearType from "./screens/EyewearType";
-import Lenstype from "./screens/Lenstype";
-import FrameSize from "./screens/FrameSize";
-import ShadeOrBlueLight from "./screens/ShadeOrBlueLight";
-import FaseShape from "./screens/FaceShape";
-import FacialFeatures from "./screens/FacialFeatures";
-import Shape from "./screens/Shape";
-import ShowBrand from "./screens/ShowBrand";
-import Brand from "./screens/Brand";
+import Gender from "./screens/1/Gender";
+import EyewearType from "./screens/2/EyewearType";
+import Lenstype from "./screens/3/Lenstype";
+import FrameSize from "./screens/4/FrameSize";
+import ShadeOrBlueLight from "./screens/5/ShadeOrBlueLight";
+import FaseShape from "./screens/6/FaceShape";
+import FacialFeatures from "./screens/7/FacialFeatures";
+import Shape from "./screens/8/Shape";
+import ShowBrand from "./screens/9/ShowBrand";
+import Brand from "./screens/10/Brand";
 import data from "../data";
 function Question({ setCount, count, formData, setFormData }) {
   const indexCount = count - 1; // array index
@@ -28,59 +28,59 @@ function Question({ setCount, count, formData, setFormData }) {
     });
   };
   const componentsData = [
-    <Gender
+    <Gender //1
       count={count}
       setCount={addOne}
       handleChange={handleChange}
       checkChecked={checkChecked}
     />,
-    <EyewearType
-      count={count}
-      setCount={addOne}
-      handleChange={handleChange}
-      checkChecked={checkChecked}
-      formData={formData}
-    />,
-    <Lenstype
-      count={count}
-      setCount={addOne}
-      handleChange={handleChange}
-      checkChecked={checkChecked}
-    />,
-    <FrameSize
-      count={count}
-      setCount={addOne}
-      handleChange={handleChange}
-      checkChecked={checkChecked}
-    />,
-    <ShadeOrBlueLight
+    <EyewearType //2
       count={count}
       setCount={addOne}
       handleChange={handleChange}
       checkChecked={checkChecked}
       formData={formData}
     />,
-    <FaseShape
+    <Lenstype //3
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+    />,
+    <FrameSize //4
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+    />,
+    <ShadeOrBlueLight //5
       count={count}
       setCount={addOne}
       handleChange={handleChange}
       checkChecked={checkChecked}
       formData={formData}
     />,
-    <FacialFeatures
+    <FaseShape //6
+      count={count}
+      setCount={addOne}
+      handleChange={handleChange}
+      checkChecked={checkChecked}
+      formData={formData}
+    />,
+    <FacialFeatures //7
       count={count}
       setCount={addOne}
       handleChange={handleChange}
       checkChecked={checkChecked}
     />,
-    <Shape
+    <Shape //8
       count={count}
       setCount={addOne}
       checkChecked={checkChecked}
       formData={formData}
       setFormData={setFormData}
     />,
-    <ShowBrand
+    <ShowBrand //9
       count={count}
       setCount={addOne}
       checkChecked={checkChecked}
@@ -88,7 +88,7 @@ function Question({ setCount, count, formData, setFormData }) {
       setFormData={setFormData}
       setLastScreen={lastScreen}
     />,
-    <Brand
+    <Brand //10
       count={count}
       setCount={addOne}
       checkChecked={checkChecked}

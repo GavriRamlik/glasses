@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 export default function AnswerBigBlock({
-  margin = "14", //distance between blocks
   height = "138",
   text = "",
   img,
@@ -17,8 +16,7 @@ export default function AnswerBigBlock({
   const style = {
     block: {
       height: `${height}px`,
-      marginBottom: `${margin}px`,
-      width: `${width}px`,
+      maxWidth: `${width}px`,
     },
     text: {
       marginTop: img ? `${marginBetween}px` : "0",
@@ -29,6 +27,8 @@ export default function AnswerBigBlock({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      className='w-full'
+      style={style.block}
     >
       {input && (
         <input
@@ -43,8 +43,7 @@ export default function AnswerBigBlock({
       )}
 
       <div
-        className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner'
-        style={style.block}
+        className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner w-full h-full'
         onClick={input ? () => {} : handleClick}
       >
         {img && <img src={img} alt={text} />}

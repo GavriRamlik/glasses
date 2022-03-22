@@ -22,6 +22,7 @@ export default function AnswerBigBlock({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      className='max-w-[318px] w-full'
     >
       <input
         type='radio'
@@ -33,7 +34,7 @@ export default function AnswerBigBlock({
         onClick={handleClick}
       />
       <div
-        className='answer-card flex items-center justify-between w-[318px] cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner px-[21px]'
+        className='answer-card flex items-center justify-between shrink cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner px-[21px]'
         style={style.block}
       >
         <p className='answer-text font-normal' style={style.text}>

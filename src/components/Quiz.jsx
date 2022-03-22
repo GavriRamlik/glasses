@@ -22,14 +22,14 @@ function Quiz({ clearAnswers, formData, setFormData }) {
     <FinalScreen clickHandler={clearAnswers} />
   ) : (
     <>
-      <header className='px-[23px] h-[58px] flex items-center justify-between bg-white relative'>
+      <header className='px-[23px] h-[var(--header)] flex items-center justify-between bg-white relative'>
         <button
           onClick={count === 1 ? clearAnswers : decrementCount}
           type='button'
         >
           <img src={arrow_left} alt='back' />
         </button>
-        <p className='font-open text-[18px] leading-[19px] text-[#3C5060]'>
+        <p className='font-open text-[18px] leading-[19px] text-[#3C5060] md:text-xl'>
           {count}/{data.length}
         </p>
         <button onClick={clearAnswers} type='button'>
@@ -42,7 +42,7 @@ function Quiz({ clearAnswers, formData, setFormData }) {
           ></div>
         </span>
       </header>
-      <article className=' flex flex-col items-center relative h-[558px]'>
+      <article className='flex flex-col items-center relative h-[calc(100%-var(--header))] px-[12px]'>
         <Question
           setCount={setCount}
           count={count}
