@@ -16,7 +16,7 @@ export default function Shape({
       <p className='mb-2 text-base leading-[30px] text-description'>
         You can pick more than one.
       </p>
-      <ScrollContainer className='max-w-full grid grid-rows-3 gap-[10px] slider py-3 justify-items-center px-1'>
+      <ScrollContainer className='max-w-full grid grid-rows-3 gap-[10px] slider py-3 relative'>
         {info.answers.map((elem) => (
           <Slide
             key={elem.id}
@@ -31,6 +31,7 @@ export default function Shape({
           />
         ))}
       </ScrollContainer>
+
       {formData[info.screenName].length === 0 ? (
         <button className='btn mt-4' disabled>
           Continue

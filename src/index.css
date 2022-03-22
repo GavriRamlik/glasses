@@ -57,7 +57,7 @@
     @apply font-semibold text-[18px] leading-[25px] text-textAnswer;
   }
   #glasses-quiz-widget {
-    @apply bg-white w-full md:max-w-[750px] overflow-hidden;
+    @apply bg-white w-full md:max-w-[750px];
   }
 
   .input {
