@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/glasses/static/css/main.64a5cbe9.css",
-    "main.js": "/glasses/static/js/main.7bfabbd1.js",
+    "main.js": "/glasses/static/js/main.33b5f149.js",
     "static/js/787.d4a3df9f.chunk.js": "/glasses/static/js/787.d4a3df9f.chunk.js",
     "static/media/transShade.svg": "/glasses/static/media/transShade.2864d760d5c0f7614b0240287fa130ed.svg",
     "static/media/hero.png": "/glasses/static/media/hero.2caa39129fa15e5aaf1a.png",
@@ -44,11 +44,11 @@
     "static/media/arrow_left.svg": "/glasses/static/media/arrow_left.90a304d451ffdf6928486dd3936f56f2.svg",
     "static/media/arrow_right.svg": "/glasses/static/media/arrow_right.0e51748e530f97f7d1040e4bbad2a6d4.svg",
     "main.64a5cbe9.css.map": "/glasses/static/css/main.64a5cbe9.css.map",
-    "main.7bfabbd1.js.map": "/glasses/static/js/main.7bfabbd1.js.map",
+    "main.33b5f149.js.map": "/glasses/static/js/main.33b5f149.js.map",
     "787.d4a3df9f.chunk.js.map": "/glasses/static/js/787.d4a3df9f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64a5cbe9.css",
-    "static/js/main.7bfabbd1.js"
+    "static/js/main.33b5f149.js"
   ]
 }
