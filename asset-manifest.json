@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/glasses/static/css/main.916919a3.css",
-    "main.js": "/glasses/static/js/main.a47acb6a.js",
+    "main.css": "/glasses/static/css/main.7991b3b8.css",
+    "main.js": "/glasses/static/js/main.adff5130.js",
     "static/js/787.d4a3df9f.chunk.js": "/glasses/static/js/787.d4a3df9f.chunk.js",
     "static/media/transShade.svg": "/glasses/static/media/transShade.2864d760d5c0f7614b0240287fa130ed.svg",
     "static/media/hero.png": "/glasses/static/media/hero.2caa39129fa15e5aaf1a.png",
@@ -43,12 +43,12 @@
     "static/media/checked.svg": "/glasses/static/media/checked.a70003be0b2ec190c209.svg",
     "static/media/arrow_left.svg": "/glasses/static/media/arrow_left.90a304d451ffdf6928486dd3936f56f2.svg",
     "static/media/arrow_right.svg": "/glasses/static/media/arrow_right.0e51748e530f97f7d1040e4bbad2a6d4.svg",
-    "main.916919a3.css.map": "/glasses/static/css/main.916919a3.css.map",
-    "main.a47acb6a.js.map": "/glasses/static/js/main.a47acb6a.js.map",
+    "main.7991b3b8.css.map": "/glasses/static/css/main.7991b3b8.css.map",
+    "main.adff5130.js.map": "/glasses/static/js/main.adff5130.js.map",
     "787.d4a3df9f.chunk.js.map": "/glasses/static/js/787.d4a3df9f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.916919a3.css",
-    "static/js/main.a47acb6a.js"
+    "static/css/main.7991b3b8.css",
+    "static/js/main.adff5130.js"
   ]
 }
