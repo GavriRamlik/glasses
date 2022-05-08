@@ -2,7 +2,8 @@ import AnswerBigBlock from "../../AnswerComponents/AnswerBigBlock";
 import Title from "../../AnswerComponents/Title";
 import BottomText from "../../AnswerComponents/BottomText";
 import data from "../../../data";
-
+import tw from "twin.macro";
+import "styled-components/macro";
 export default function EyewearType({
   count,
   setCount,
@@ -14,17 +15,13 @@ export default function EyewearType({
   return (
     <>
       <Title marginX='55' text={info.title} />
-      <div className='flex justify-center items-center flex-wrap min-w-full gap-3'>
-        {info.answers.map((elem) => (
+      <div tw='flex justify-center items-center flex-wrap min-w-full gap-3'>
+        {info.answers.map(elem => (
           <AnswerBigBlock
             key={elem.id}
             text={elem.text}
             value={elem.value}
-            img={
-              elem.img[formData.gender]
-                ? elem.img[formData.gender]
-                : elem.img["4"]
-            }
+            img={elem.img[formData.gender] ? elem.img[formData.gender] : elem.img["4"]}
             marginBetween={"18"}
             handleClick={setCount}
             handleChange={handleChange}

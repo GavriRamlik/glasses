@@ -1,57 +1,57 @@
 import { nanoid } from "nanoid";
 //1
-import womanImg from "./images/first_ques/woman.svg";
-import manImg from "./images/first_ques/men.svg";
+import WomanImg from "./images/first_ques/Woman.jsx";
+import ManImg from "./images/first_ques/Men.jsx";
 
 //2
-import womanEye from "./images/second_ques/womenEyeglasses.svg";
-import menEye from "./images/second_ques/menEyeglasses.svg";
-import womanSun from "./images/second_ques/womenSunglasses.svg";
-import menSun from "./images/second_ques/menSunglasses.svg";
+import WomanEye from "./images/second_ques/WomenEyeglasses.jsx";
+import MenEye from "./images/second_ques/MenEyeglasses.jsx";
+import WomanSun from "./images/second_ques/WomenSunglasses.jsx";
+import MenSun from "./images/second_ques/MenSunglasses.jsx";
 
 //5
-import darkShade from "./images/fifth_ques/darkShade.svg";
-import lightShade from "./images/fifth_ques/lightShade.svg";
-import transShade from "./images/fifth_ques/transShade.svg";
+import DarkShade from "./images/fifth_ques/DarkShade.jsx";
+import LightShade from "./images/fifth_ques/LightShade.jsx";
+import TransShade from "./images/fifth_ques/TransShade.jsx";
 
 //6
-import menLong from "./images/sixth_ques/menOval.svg";
-import menRound from "./images/sixth_ques/menRound.svg";
-import menBoth from "./images/sixth_ques/menBoth.svg";
-import womanLong from "./images/sixth_ques/womanLong.svg";
-import womanRound from "./images/sixth_ques/womanRound.svg";
-import womanBoth from "./images/sixth_ques/womanBoth.svg";
-import bothLong from "./images/sixth_ques/bothLong.svg";
-import bothRound from "./images/sixth_ques/bothRound.svg";
-import bothBoth from "./images/sixth_ques/bothBoth.svg";
+import MenLong from "./images/sixth_ques/MenOval.jsx";
+import MenRound from "./images/sixth_ques/MenRound.jsx";
+import MenBoth from "./images/sixth_ques/MenBoth.jsx";
+import WomanLong from "./images/sixth_ques/WomanLong.jsx";
+import WomanRound from "./images/sixth_ques/WomanRound.jsx";
+import WomanBoth from "./images/sixth_ques/WomanBoth.jsx";
+import BothLong from "./images/sixth_ques/BothLong.jsx";
+import BothRound from "./images/sixth_ques/BothRound.jsx";
+import BothBoth from "./images/sixth_ques/BothBoth.jsx";
 
 //8
-import rectangle from "./images/eight_ques/rectangle.jpg";
-import aviator from "./images/eight_ques/aviator.jpg";
-import catEye from "./images/eight_ques/catEye.jpg";
-import geometric from "./images/eight_ques/geometric.jpg";
-import oval from "./images/eight_ques/oval.jpg";
-import oversized from "./images/eight_ques/oversized.jpg";
-import rimless from "./images/eight_ques/rimless.jpg";
-import round from "./images/eight_ques/round.jpg";
-import browline from "./images/eight_ques/browline.jpg";
-import square from "./images/eight_ques/square.jpg";
-import wayframe from "./images/eight_ques/wayframe.jpg";
-import wrap from "./images/eight_ques/wrap.jpg";
+import { rectangle } from "./images/eight_ques/rectangle.js";
+import { aviator } from "./images/eight_ques/aviator.js";
+import { catEye } from "./images/eight_ques/catEye.js";
+import { geometric } from "./images/eight_ques/geometric.js";
+import { oval } from "./images/eight_ques/oval.js";
+import { oversized } from "./images/eight_ques/oversized.js";
+import { rimless } from "./images/eight_ques/rimless.js";
+import { round } from "./images/eight_ques/round.js";
+import { browline } from "./images/eight_ques/browline.js";
+import { square } from "./images/eight_ques/square.js";
+import { wayframe } from "./images/eight_ques/wayframe.js";
+import { wrap } from "./images/eight_ques/wrap.js";
 
 //10
-import armani from "./images/tenth_ques/armani_exchange.svg";
-import burberry from "./images/tenth_ques/burberry.svg";
-import coach from "./images/tenth_ques/coach.svg";
-import gucci from "./images/tenth_ques/gucci.svg";
-import hillary from "./images/tenth_ques/hillary_duff.svg";
-import michael from "./images/tenth_ques/michael_kors.svg";
-import oakley from "./images/tenth_ques/oakley.svg";
-import prada from "./images/tenth_ques/prada.svg";
-import rayban from "./images/tenth_ques/ray_ban.svg";
-import tory from "./images/tenth_ques/tory_burch.svg";
-import versace from "./images/tenth_ques/versace.svg";
-import vogue from "./images/tenth_ques/vogue.svg";
+import Armani from "./images/tenth_ques/Armani_exchange.jsx";
+import Burberry from "./images/tenth_ques/Burberry.jsx";
+import Coach from "./images/tenth_ques/Coach.jsx";
+import Gucci from "./images/tenth_ques/Gucci.jsx";
+import Hillary from "./images/tenth_ques/Hillary_duff.jsx";
+import Michael from "./images/tenth_ques/Michael_kors.jsx";
+import Oakley from "./images/tenth_ques/Oakley.jsx";
+import Prada from "./images/tenth_ques/Prada.jsx";
+import Rayban from "./images/tenth_ques/Ray_ban.jsx";
+import Tory from "./images/tenth_ques/Tory_burch.jsx";
+import Versace from "./images/tenth_ques/Versace.jsx";
+import Vogue from "./images/tenth_ques/Vogue.jsx";
 
 const data = [
   {
@@ -61,13 +61,13 @@ const data = [
       {
         id: nanoid(),
         text: "Women's Styles",
-        img: womanImg,
+        img: <WomanImg />,
         value: "5",
       },
       {
         id: nanoid(),
         text: "Men's Styles",
-        img: manImg,
+        img: <ManImg />,
         value: "4",
       },
     ],
@@ -81,8 +81,8 @@ const data = [
         id: nanoid(),
         text: "Eyeglasses",
         img: {
-          4: menEye,
-          5: womanEye,
+          4: <MenEye />,
+          5: <WomanEye />,
         },
         value: "210",
       },
@@ -90,8 +90,8 @@ const data = [
         id: nanoid(),
         text: "Sunglasses",
         img: {
-          4: menSun,
-          5: womanSun,
+          4: <MenSun />,
+          5: <WomanSun />,
         },
         value: "211",
       },
@@ -183,8 +183,7 @@ const data = [
   },
   {
     eye: {
-      title:
-        "Would you like to protect your eyes from light emanating from screens?",
+      title: "Would you like to protect your eyes from light emanating from screens?",
       screenName: "blue_light",
       answers: [
         {
@@ -206,19 +205,19 @@ const data = [
         {
           id: nanoid(),
           text: "Dark Shade",
-          img: darkShade,
+          img: <DarkShade />,
           value: "dark",
         },
         {
           id: nanoid(),
           text: "Light Shade",
-          img: lightShade,
+          img: <LightShade />,
           value: "light",
         },
         {
           id: nanoid(),
           text: "Transitioning Shade",
-          img: transShade,
+          img: <TransShade />,
           value: "transition",
         },
       ],
@@ -232,9 +231,9 @@ const data = [
         id: nanoid(),
         text: "I have a long face",
         img: {
-          men: menLong,
-          woman: womanLong,
-          both: bothLong,
+          men: <MenLong />,
+          woman: <WomanLong />,
+          both: <BothLong />,
         },
         value: "long",
       },
@@ -242,9 +241,9 @@ const data = [
         id: nanoid(),
         text: "I have a round face",
         img: {
-          men: menRound,
-          woman: womanRound,
-          both: bothRound,
+          men: <MenRound />,
+          woman: <WomanRound />,
+          both: <BothRound />,
         },
         value: "round",
       },
@@ -252,9 +251,9 @@ const data = [
         id: nanoid(),
         text: "In between",
         img: {
-          men: menBoth,
-          woman: womanBoth,
-          both: bothBoth,
+          men: <MenBoth />,
+          woman: <WomanBoth />,
+          both: <BothBoth />,
         },
         value: "between",
       },
@@ -381,62 +380,62 @@ const data = [
     answers: [
       {
         id: nanoid(),
-        img: rayban,
+        img: <Rayban />,
         value: "ray_ban",
       },
       {
         id: nanoid(),
-        img: hillary,
+        img: <Hillary />,
         value: "hillary_duff",
       },
       {
         id: nanoid(),
-        img: michael,
+        img: <Michael />,
         value: "michael_kors",
       },
       {
         id: nanoid(),
-        img: oakley,
+        img: <Oakley />,
         value: "oakley",
       },
       {
         id: nanoid(),
-        img: prada,
+        img: <Prada />,
         value: "prada",
       },
       {
         id: nanoid(),
-        img: coach,
+        img: <Coach />,
         value: "coach",
       },
       {
         id: nanoid(),
-        img: gucci,
+        img: <Gucci />,
         value: "gucci",
       },
       {
         id: nanoid(),
-        img: versace,
+        img: <Versace />,
         value: "versace",
       },
       {
         id: nanoid(),
-        img: tory,
+        img: <Tory />,
         value: "tory_burch",
       },
       {
         id: nanoid(),
-        img: armani,
+        img: <Armani />,
         value: "armani",
       },
       {
         id: nanoid(),
-        img: vogue,
+        img: <Vogue />,
         value: "vogue",
       },
       {
         id: nanoid(),
-        img: burberry,
+        img: <Burberry />,
         value: "burberry",
       },
     ],

@@ -2,6 +2,9 @@ import AnswerBigBlock from "../../AnswerComponents/AnswerBigBlock";
 import Title from "../../AnswerComponents/Title";
 import data from "../../../data";
 import HorizontalImgBlock from "../../AnswerComponents/HorizontalImgBlock";
+import tw from "twin.macro";
+import "styled-components/macro";
+
 export default function ShadeOrBlueLight({
   count,
   setCount,
@@ -14,8 +17,8 @@ export default function ShadeOrBlueLight({
   return eyeScreen ? (
     <>
       <Title text={info.title} />
-      <div className='flex justify-center items-center flex-wrap min-w-full gap-3'>
-        {info.answers.map((elem) => (
+      <div tw='flex justify-center items-center flex-wrap min-w-full gap-3'>
+        {info.answers.map(elem => (
           <HorizontalImgBlock
             key={elem.id}
             text={elem.text}
@@ -32,8 +35,8 @@ export default function ShadeOrBlueLight({
   ) : (
     <>
       <Title text={info.title} />
-      <div className='flex justify-center items-center flex-wrap min-w-full gap-3'>
-        {info.answers.map((elem) => (
+      <div tw='flex justify-center items-center flex-wrap min-w-full gap-3'>
+        {info.answers.map(elem => (
           <AnswerBigBlock
             key={elem.id}
             text={elem.text}

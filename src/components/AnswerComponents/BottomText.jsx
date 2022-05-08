@@ -1,3 +1,7 @@
+import tw from "twin.macro";
+import "styled-components/macro";
+import { HiddenInput } from "./css-components";
+
 export default function BottomText({
   inputName,
   handleChange,
@@ -7,17 +11,17 @@ export default function BottomText({
   value = "skip",
 }) {
   return (
-    <label className='absolute bottom-0 cursor-pointer'>
-      <input
+    <label tw='absolute bottom-0 cursor-pointer'>
+      <HiddenInput
         type='radio'
-        className='input peer'
+        className='peer'
         name={inputName}
         value={value}
         onChange={handleChange}
         checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
-      <p className='text-base leading-[22px] text-grayDark underline font-bold peer-checked:text-gray-400'>
+      <p tw='text-base leading-[22px] text-grayDark underline font-bold peer-checked:text-gray-400'>
         {text}
       </p>
     </label>

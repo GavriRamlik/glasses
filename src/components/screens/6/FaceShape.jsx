@@ -2,6 +2,8 @@ import Title from "../../AnswerComponents/Title";
 import BottomText from "../../AnswerComponents/BottomText";
 import data from "../../../data";
 import HorizontalImgBlock from "../../AnswerComponents/HorizontalImgBlock";
+import tw from "twin.macro";
+import "styled-components/macro";
 
 export default function FaceShape({
   count,
@@ -18,8 +20,8 @@ export default function FaceShape({
   return (
     <>
       <Title text={info.title} />
-      <div className='flex justify-center items-center flex-wrap min-w-full gap-3'>
-        {info.answers.map((elem) => {
+      <div tw='flex justify-center items-center flex-wrap min-w-full gap-3'>
+        {info.answers.map(elem => {
           if (formData.gender === "5") {
             imgData = elem.img.woman;
           } else if (formData.gender === "4") {

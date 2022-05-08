@@ -9,18 +9,21 @@ import Shape from "./screens/8/Shape";
 import ShowBrand from "./screens/9/ShowBrand";
 import Brand from "./screens/10/Brand";
 import data from "../data";
+import tw from "twin.macro";
+import "styled-components/macro";
+
 function Question({ setCount, count, formData, setFormData }) {
   const indexCount = count - 1; // array index
   const checkChecked = (name, str) => {
     return formData[name] === str;
   };
-  const addOne = () => setCount((prev) => prev + 1);
+  const addOne = () => setCount(prev => prev + 1);
   const lastScreen = () => {
     setCount(data.length + 1);
   };
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
-    setFormData((prev) => {
+    setFormData(prev => {
       return {
         ...prev,
         [name]: value,

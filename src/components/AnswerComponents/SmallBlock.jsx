@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import tw from "twin.macro";
+import "styled-components/macro";
+import { AnswerCard, AnswerText, HiddenInput } from "./css-components";
 
-export default function AnswerBigBlock({
+export default function SmallBlock({
   margin = "12", //distance between blocks
   height = "56",
   text = "",
@@ -22,28 +25,24 @@ export default function AnswerBigBlock({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className='max-w-[318px] w-full'
+      tw='max-w-[318px] w-full'
     >
-      <input
+      <HiddenInput
         type='radio'
-        className='input peer'
+        className='peer'
         name={inputName}
         value={value}
         onChange={handleChange}
         checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
-      <div
-        className='answer-card flex items-center justify-between shrink cursor-pointer hover:shadow-inner transition-all group peer-checked:shadow-inner px-[21px]'
+      <AnswerCard
+        tw=' flex items-center justify-between flex-shrink cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner px-[21px]'
         style={style.block}
       >
-        <p className='answer-text font-normal' style={style.text}>
-          {text}
-        </p>
-        <p className='text-black font-bold leading-[25px] text-[18px]'>
-          {size}
-        </p>
-      </div>
+        <AnswerText tw='font-normal'>{text}</AnswerText>
+        <p tw='text-black font-bold leading-[25px] text-[18px]'>{size}</p>
+      </AnswerCard>
     </motion.label>
   );
 }

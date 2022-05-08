@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap");
@@ -27,11 +27,7 @@
   }
 
   .background {
-    background: linear-gradient(
-      180deg,
-      #e8f0f2 0%,
-      rgba(232, 240, 242, 0) 100%
-    );
+    background: linear-gradient(180deg, #e8f0f2 0%, rgba(232, 240, 242, 0) 100%);
   }
 
   .title {
@@ -49,8 +45,7 @@
   .answer-card-slide {
     background: #ffffff;
     border: 0.98px solid rgba(231, 235, 237, 0.80141);
-    box-shadow: 0px 1px 0px rgba(58, 72, 80, 0.1),
-      0px 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 0px rgba(58, 72, 80, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 14px;
   }
   .answer-text {
@@ -67,21 +62,21 @@
   .slider {
     grid-template-columns: repeat(4, 160px);
   }
-}
-.checkbox ~ div::before {
-  content: "";
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  background: transparent;
-  background-image: url(images/common/checked.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: 0.2s height cubic-bezier(0.19, 1, 0.22, 1);
-  top: -7px;
-  right: -7px;
-}
-.checkbox:checked ~ div::before {
-  width: 20px;
-  height: 20px;
-}
+  .checkbox ~ div::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTAuMjYyMSIgY3k9IjkuNzAyIiByPSI5LjcwMiIgZmlsbD0iIzIxOTZGMyIvPgo8cGF0aCBkPSJNNy4wMjgwOCAxMC4yNjk1TDkuNjI2ODIgMTIuOTM2TDEzLjQ5NjEgNy41NDYwMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjk2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s height cubic-bezier(0.19, 1, 0.22, 1);
+    top: -7px;
+    right: -7px;
+  }
+  .checkbox:checked ~ div::before {
+    width: 20px;
+    height: 20px;
+  }
+} */

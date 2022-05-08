@@ -3,16 +3,13 @@ import Title from "../../AnswerComponents/Title";
 import BottomText from "../../AnswerComponents/BottomText";
 import data from "../../../data";
 import SmallBlock from "../../AnswerComponents/SmallBlock";
-import lense from "../../../images/fourth_ques/lense.svg";
+import Lense from "../../../images/fourth_ques/Lense.jsx";
 import { useState, useEffect } from "react";
 import PreScreen from "../../AnswerComponents/PreScreen";
+import tw from "twin.macro";
+import "styled-components/macro";
 
-export default function FrameSize({
-  count,
-  setCount,
-  handleChange,
-  checkChecked,
-}) {
+export default function FrameSize({ count, setCount, handleChange, checkChecked }) {
   const [additionalScreen, setAdditionalScreen] = useState(false);
   const [visible, setVisible] = useState(true);
   const toggleScreen = () => setAdditionalScreen(true);
@@ -29,8 +26,8 @@ export default function FrameSize({
     ) : (
       <>
         <Title text={info.anotherScreen.title} marginX='40' />
-        <div className='flex justify-center items-center flex-wrap min-w-full gap-3'>
-          {info.anotherScreen.answers.map((elem) => (
+        <div tw='flex justify-center items-center flex-wrap min-w-full gap-3'>
+          {info.anotherScreen.answers.map(elem => (
             <AnswerBigBlock
               width='304'
               key={elem.id}
@@ -60,20 +57,23 @@ export default function FrameSize({
     // 4
     <>
       <Title marginX='49' text={info.title} />
-      <img src={lense} alt='lense' className='mb-[35px] h-[118px]' />
-        {info.answers.map((elem) => (
-          <SmallBlock
-            key={elem.id}
-            text={elem.text}
-            size={elem.size}
-            value={elem.value}
-            marginBetween={elem.marginBetween}
-            handleClick={setCount}
-            handleChange={handleChange}
-            inputName={info.screenName}
-            checkChecked={checkChecked}
-          />
-        ))}
+      <div tw='mb-3'>
+        <Lense />
+      </div>
+
+      {info.answers.map(elem => (
+        <SmallBlock
+          key={elem.id}
+          text={elem.text}
+          size={elem.size}
+          value={elem.value}
+          marginBetween={elem.marginBetween}
+          handleClick={setCount}
+          handleChange={handleChange}
+          inputName={info.screenName}
+          checkChecked={checkChecked}
+        />
+      ))}
       <BottomText
         text={info.bottomText}
         handleClick={toggleScreen}

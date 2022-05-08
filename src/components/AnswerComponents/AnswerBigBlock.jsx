@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
+import React from "react";
+import tw from "twin.macro";
+import "styled-components/macro";
+import { AnswerCard, AnswerText, HiddenInput } from "./css-components";
 
 export default function AnswerBigBlock({
   height = "138",
   text = "",
-  img,
+  img = null,
   width = "274",
   marginBetween, // distance between content
   inputName,
@@ -27,13 +31,13 @@ export default function AnswerBigBlock({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className='w-full'
+      tw='w-full'
       style={style.block}
     >
       {input && (
-        <input
+        <HiddenInput
           type='radio'
-          className='input peer'
+          className='peer'
           name={inputName}
           value={value}
           onChange={handleChange}
@@ -41,16 +45,14 @@ export default function AnswerBigBlock({
           onClick={handleClick}
         />
       )}
-
-      <div
-        className='answer-card flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner w-full h-full'
+      <AnswerCard
+        tw='flex items-center justify-center flex-col cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner w-full h-full'
         onClick={input ? () => {} : handleClick}
       >
-        {img && <img src={img} alt={text} />}
-        <p className=' answer-text' style={style.text}>
-          {text}
-        </p>
-      </div>
+        {" "}
+        {React.isValidElement(img) ? img : img && <img src={img} alt={text} />}
+        <AnswerText style={style.text}>{text}</AnswerText>
+      </AnswerCard>
     </motion.label>
   );
 }

@@ -1,3 +1,7 @@
+import tw from "twin.macro";
+import "styled-components/macro";
+import { QuestionTitle } from "./css-components";
+
 export default function Title({
   marginBot = "32",
   text = "",
@@ -8,8 +12,8 @@ export default function Title({
     margin: `${marginTop}px ${marginX}px ${marginBot}px`,
   };
   return (
-    <h2 className={`question-title text-center`} style={style}>
+    <QuestionTitle tw='text-center' style={style}>
       {text}
-    </h2>
+    </QuestionTitle>
   );
 }

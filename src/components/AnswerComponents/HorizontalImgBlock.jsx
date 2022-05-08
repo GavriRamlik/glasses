@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import React from "react";
+import tw from "twin.macro";
+import "styled-components/macro";
+import { AnswerCard, HiddenInput } from "./css-components";
 
 export default function HorizontalImgBlock({
   margin = "16", //distance between blocks
@@ -34,31 +38,25 @@ export default function HorizontalImgBlock({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       style={style.block}
-      className='w-full'
+      tw='w-full'
     >
-      <input
+      <HiddenInput
         type='radio'
-        className='input peer'
+        className='peer'
         name={inputName}
         value={value}
         onChange={handleChange}
         checked={checkChecked(inputName, value)}
         onClick={handleClick}
       />
-      <div className='answer-card flex items-center cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner h-full'>
-        <div
-          className='pl-[25px] border-l-[#dedede] border-r-[1px]'
-          style={style.imgBox}
-        >
-          <img src={img} alt={text} />
+      <AnswerCard tw=' flex items-center cursor-pointer hover:shadow-inner transition-all peer-checked:shadow-inner h-full'>
+        <div tw='pl-[25px] border-l-[#dedede] border-r-[1px]' style={style.imgBox}>
+          {React.isValidElement(img) ? img : img && <img src={img} alt={text} />}
         </div>
-        <p
-          className={`font-semibold leading-[25px] text-textAnswer`}
-          style={style.text}
-        >
+        <p tw='font-semibold leading-[25px] text-textAnswer' style={style.text}>
           {text}
         </p>
-      </div>
+      </AnswerCard>
     </motion.label>
   );
 }

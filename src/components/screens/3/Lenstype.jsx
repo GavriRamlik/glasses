@@ -5,6 +5,8 @@ import data from "../../../data";
 import { useTimeout } from "usehooks-ts";
 import { useState } from "react";
 import PreScreen from "../../AnswerComponents/PreScreen";
+import tw from "twin.macro";
+import "styled-components/macro";
 
 export default function Lenstype({
   count,
@@ -22,16 +24,14 @@ export default function Lenstype({
   const info = data[count - 1];
   let componentToRender;
   if (visible) {
-    componentToRender = (
-      <PreScreen text="Let's get to know you!" visible={visible} />
-    );
+    componentToRender = <PreScreen text="Let's get to know you!" visible={visible} />;
   } else if (additionalScreen) {
     // screen 3.2
     componentToRender = (
       <>
         <Title marginBot='23' text={info.anotherScreen.title} />
-        <div className='flex justify-center items-center flex-wrap min-w-full gap-3'>
-          {info.anotherScreen.answers.map((elem) => (
+        <div tw='flex justify-center items-center flex-wrap min-w-full gap-3'>
+          {info.anotherScreen.answers.map(elem => (
             <AnswerBigBlock
               width='294'
               height='84'
@@ -59,8 +59,8 @@ export default function Lenstype({
     componentToRender = (
       <>
         <Title text={info.title} />
-        <div className='flex justify-center items-center flex-wrap min-w-full gap-3 mx-5'>
-          {info.answers.map((elem) => {
+        <div tw='flex justify-center items-center flex-wrap min-w-full gap-3 mx-5'>
+          {info.answers.map(elem => {
             if (elem.additionalScreen) {
               clickHandler = showAdditionalScreen;
             } else {

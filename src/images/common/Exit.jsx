@@ -1,0 +1,30 @@
+import React from "react";
+
+export default function Exit() {
+  return (
+    <svg
+      width='16'
+      height='16'
+      viewBox='0 0 16 16'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <g id='exit'>
+        <path
+          id='Line 10 Copy'
+          d='M14.6118 1L1 14.6118'
+          stroke='#3A4850'
+          strokeWidth='2'
+          strokeLinecap='round'
+        />
+        <path
+          id='Line 10 Copy 2'
+          d='M1.17677 1L14.7886 14.6118'
+          stroke='#3A4850'
+          strokeWidth='2'
+          strokeLinecap='round'
+        />
+      </g>
+    </svg>
+  );
+}
