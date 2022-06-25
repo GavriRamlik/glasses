@@ -1,2 +1,4 @@
-# It volga
-чтобы собрать скрипт в консоль прописываем npm i, затем npm run build, в корневой папке появится папка build, идем по пути build/static/js и файл который начинается на main с расширением js (обычно второй по размерности) и есть нужный скрипт который можно подключать на любую html страницу
+# It volga project
+
+widget produces url with selected parameters in console when you complete it
+
